@@ -9,13 +9,13 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   searchPokemon(query: string) {
-    const url = `https://pokeapi.co/api/v2/type/${query}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${query}`;
     let obsPok= this.http.get(url);
     return obsPok;
   }
 
   searchPokemonDett(query: string) {
-    const url = `https://pokeapi.co/api/v2/pokemon/${query}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${query}`;
     let obsDet= this.http.get(url);
     return obsDet;
   }

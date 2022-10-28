@@ -1,11 +1,12 @@
 
 
 <div *ngIf="det" >
-    <div *ngFor="let k of det.abilities">
-        <p>Abilities: {{k.ability.name}}</p>
+    <div *ngFor="let k of det.meals">
+        <p>{{k.idMeal}}</p>
+        <p>{{k.strMeal}}</p>
+        <p>{{k.strCategory}}</p>
+        <p>{{k.strArea}}</p>
+        <p>{{k.strInstructions}}</p>
     </div>
-    Name: {{det.forms[0].name}}<br>
-    Height: {{det.height}}
-    
     <p><a href (click)="back()">Back</a></p>
 </div>

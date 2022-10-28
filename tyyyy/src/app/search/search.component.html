@@ -6,10 +6,10 @@
     </p>
 
     <div *ngIf="results">
-        <div *ngFor="let t of results.pokemon">
-            SLOT: {{t.slot}}<br>
-            NAME: <a [routerLink]="['/item-pokemon', t.pokemon.name]">{{t.pokemon.name}}</a><br>
-            URL: {{t.pokemon.url}}
+        <div *ngFor="let t of results.meals">
+            MEAL: {{t.strMeal}}<br>
+            ID: <a [routerLink]="['/item-pokemon', t.idMeal]">{{t.idMeal}}</a><br>
+            <img src="{{t.strMealThumb}}" alt="" style="height: 200px; width:200px;">
             <hr>
         </div>
     </div>
